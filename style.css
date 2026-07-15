@@ -76,3 +76,16 @@ button:active{
     transform:scale(.97);
 
 }
+
+.equal{
+
+background:#2563eb;
+font-weight:700;
+
+}
+
+.equal:hover{
+
+background:#1d4ed8;
+
+}
