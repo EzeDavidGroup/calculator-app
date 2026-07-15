@@ -30,9 +30,22 @@ buttons.forEach(button => {
 
         } else {
 
-            display.value += value;
+    const operators = ["+", "-", "*", "/", "%"];
 
-        }
+    const lastCharacter = display.value.slice(-1);
+
+    if (
+        operators.includes(value) &&
+        operators.includes(lastCharacter)
+    ) {
+
+        return;
+
+    }
+
+    display.value += value;
+
+}
 
     });
 
