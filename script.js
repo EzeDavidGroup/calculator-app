@@ -1,7 +1,11 @@
 const display = document.getElementById("display");
 const buttons = document.querySelectorAll(".buttons button");
+const historyList = document.getElementById("historyList");
+const clearHistory = document.getElementById("clearHistory");
 
 let expression = "";
+
+let history = JSON.parse(localStorage.getItem("history")) || [];
 
 buttons.forEach(button => {
 
@@ -84,3 +88,38 @@ function updateDisplay() {
     display.value = expression;
 
 }
+
+
+function saveHistory() {
+
+    localStorage.setItem("history", JSON.stringify(history));
+
+}
+
+function renderHistory() {
+
+    historyList.innerHTML = "";
+
+    history.forEach(item => {
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        historyList.prepend(li);
+
+    });
+
+}
+
+clearHistory.addEventListener("click", () => {
+
+    history = [];
+
+    saveHistory();
+
+    renderHistory();
+
+});
+
+renderHistory();
