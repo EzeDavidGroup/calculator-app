@@ -144,3 +144,4 @@ clearHistory.addEventListener("click", () => {
 });
 
 renderHistory();
+
