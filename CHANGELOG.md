@@ -6,6 +6,19 @@ The format is inspired by Keep a Changelog and the project follows Semantic Vers
 
 ---
 
+## v2.1.0
+
+### Added
+- History drawer inside calculator
+- Toggle history button
+- Persistent calculation history using Local Storage
+- Clear History feature
+
+### Improved
+- Refactored calculator logic
+- Cleaner JavaScript structure
+- Improved UI organization
+
 ## [v2.0.0] - July 2026
 
 ### Added
