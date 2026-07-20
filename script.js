@@ -74,16 +74,23 @@ function calculate() {
         expression = result.toString();
 
         history.push(`${originalExpression} = ${result}`);
-
+        console.log(history);
         saveHistory();
-
-        renderHistory();
 
         updateDisplay();
 
+        renderHistory();
+
     }
 
-    
+    catch {
+
+        expression = "";
+
+        display.value = "Error";
+
+    }
+
 }
 
     
