@@ -93,15 +93,7 @@ function calculate() {
 
 }
 
-    catch {
-
-        expression = "";
-
-        display.value = "Error";
-
-    }
-
-}
+    
 
 function updateDisplay() {
 
