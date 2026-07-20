@@ -1,3 +1,6 @@
+const historyBtn = document.getElementById("historyBtn");
+const historyDrawer = document.getElementById("historyDrawer");
+
 const display = document.getElementById("display");
 
 const buttons = document.querySelectorAll("button");
@@ -17,6 +20,12 @@ buttons.forEach(button => {
         handleButton(button.textContent);
 
     });
+
+});
+
+historyBtn.addEventListener("click", () => {
+
+    historyDrawer.classList.toggle("show");
 
 });
 
