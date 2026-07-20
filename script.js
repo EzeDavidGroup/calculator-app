@@ -67,11 +67,31 @@ function calculate() {
 
     try {
 
-        expression = eval(expression).toString();
+        const originalExpression = expression;
+
+        const result = eval(expression);
+
+        expression = result.toString();
+
+        history.push(`${originalExpression} = ${result}`);
+
+        saveHistory();
+
+        renderHistory();
 
         updateDisplay();
 
     }
+
+    catch {
+
+        expression = "";
+
+        display.value = "Error";
+
+    }
+
+}
 
     catch {
 
