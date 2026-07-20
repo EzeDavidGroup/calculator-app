@@ -83,14 +83,7 @@ function calculate() {
 
     }
 
-    catch {
-
-        expression = "";
-
-        display.value = "Error";
-
-    }
-
+    
 }
 
     
