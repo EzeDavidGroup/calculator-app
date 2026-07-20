@@ -74,6 +74,8 @@ function calculate() {
         expression = result.toString();
 
         history.push(`${originalExpression} = ${result}`);
+
+alert(history.length);
         console.log(history);
         saveHistory();
 
