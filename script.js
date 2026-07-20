@@ -17,6 +17,12 @@ buttons.forEach(button => {
 
 });
 
+historyBtn.addEventListener("click", () => {
+
+    historyDrawer.classList.toggle("show");
+
+});
+
 function handleButton(value) {
 
     if (value === "C") {
