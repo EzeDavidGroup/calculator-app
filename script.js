@@ -83,8 +83,7 @@ function calculate() {
 
         history.push(`${originalExpression} = ${result}`);
 
-alert(history.length);
-        console.log(history);
+
         saveHistory();
 
         updateDisplay();
