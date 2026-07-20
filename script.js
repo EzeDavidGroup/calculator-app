@@ -2,6 +2,8 @@ const display = document.getElementById("display");
 const buttons = document.querySelectorAll(".buttons button");
 const historyList = document.getElementById("historyList");
 const clearHistory = document.getElementById("clearHistory");
+const historyBtn = document.getElementById("historyBtn");
+const historyDrawer = document.getElementById("historyDrawer");
 
 let expression = "";
 
