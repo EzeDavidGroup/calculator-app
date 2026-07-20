@@ -1,17 +1,7 @@
-const historyBtn = document.getElementById("historyBtn");
-const historyDrawer = document.getElementById("historyDrawer");
-
 const display = document.getElementById("display");
-
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".buttons button");
 
 let expression = "";
-
-function updateDisplay() {
-
-    display.value = expression;
-
-}
 
 buttons.forEach(button => {
 
@@ -23,14 +13,74 @@ buttons.forEach(button => {
 
 });
 
-historyBtn.addEventListener("click", () => {
-
-    historyDrawer.classList.toggle("show");
-
-});
-
 function handleButton(value) {
 
-    console.log(value);
+    if (value === "C") {
+
+        expression = "";
+
+    }
+
+    else if (value === "←") {
+
+        expression = expression.slice(0, -1);
+
+    }
+
+    else if (value === "=") {
+
+        calculate();
+
+        return;
+
+    }
+
+    else {
+
+        const operators = ["+", "-", "*", "/", "%"];
+        const lastCharacter = expression.slice(-1);
+
+        if (
+            operators.includes(value) &&
+            operators.includes(lastCharacter)
+        ) {
+
+            return;
+
+        }
+
+        expression += value;
+
+    }
+
+    updateDisplay();
+
+}
+
+function calculate() {
+
+    if (expression === "") return;
+
+    try {
+
+        expression = eval(expression).toString();
+
+        updateDisplay();
+
+    }
+
+    catch {
+
+        expression = "";
+
+        display.value = "Error";
+
+    }
+
+}
+
+function updateDisplay() {
+
+    display.value = expression;
 
 }
