@@ -129,7 +129,7 @@ function renderHistory() {
 
         const li = document.createElement("li");
 
-        li.textContent = item;
+        li.textContent = `${item.expression} = ${item.result}`;
 
         historyList.prepend(li);
 
