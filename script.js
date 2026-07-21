@@ -9,7 +9,7 @@ let expression = "";
 
 let history = [];
 
-localStorage.removeItem("history");
+let history = JSON.parse(localStorage.getItem("history")) || [];
 
 
 buttons.forEach(button => {
