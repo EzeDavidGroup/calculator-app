@@ -134,6 +134,15 @@ function renderHistory() {
 
         li.textContent = `${item.expression} = ${item.result}`;
 
+        li.style.cursor = "pointer";
+
+li.addEventListener("click", () => {
+
+    expression = item.expression;
+
+    updateDisplay();
+
+});
         historyList.prepend(li);
 
     });
