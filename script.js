@@ -7,8 +7,6 @@ const historyDrawer = document.getElementById("historyDrawer");
 
 let expression = "";
 
-let history = [];
-
 let history = JSON.parse(localStorage.getItem("history")) || [];
 
 
