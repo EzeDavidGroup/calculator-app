@@ -6,6 +6,26 @@ The format is inspired by Keep a Changelog and the project follows Semantic Vers
 
 ---
 
+# Changelog
+
+## v2.2.0
+
+### Added
+- Keyboard support for desktop users
+- Keyboard event listener
+- Input validation for keyboard keys
+- Keyboard translator for Enter, Backspace and Escape
+- Shared calculator logic between mouse and keyboard input
+
+### Improved
+- Reused existing handleButton() function
+- Eliminated duplicate calculator logic
+- Improved application architecture using a single input flow
+
+### Fixed
+- Invalid keyboard keys are ignored
+- Calculator only accepts supported input
+
 ## v2.1.0
 
 ### Added
