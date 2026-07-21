@@ -81,9 +81,13 @@ function calculate() {
 
         expression = result.toString();
 
-        history.push(`${originalExpression} = ${result}`);
+        history.push({
 
+    expression: originalExpression,
 
+    result: result.toString()
+
+});
         saveHistory();
 
         updateDisplay();
