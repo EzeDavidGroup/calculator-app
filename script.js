@@ -7,7 +7,10 @@ const historyDrawer = document.getElementById("historyDrawer");
 
 let expression = "";
 
-let history = JSON.parse(localStorage.getItem("history")) || [];
+let history = [];
+
+localStorage.removeItem("history");
+
 
 buttons.forEach(button => {
 
